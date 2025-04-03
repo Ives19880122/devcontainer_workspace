@@ -8,7 +8,8 @@ import org.springframework.boot.CommandLineRunner
 class WeeklyReportApplication implements CommandLineRunner {
 
     static void main(String[] args) {
-        SpringApplication.run(WeeklyReportApplication, args)
+        def context = SpringApplication.run(WeeklyReportApplication, args)
+        context.close()
     }
 
     @Override
