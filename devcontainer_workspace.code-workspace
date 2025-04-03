@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic", // 啟用自動空值分析
+		"java.import.gradle.enabled": false, // 如果不使用 Gradle，禁用它
+		"java.import.maven.enabled": true,  // 確保 Maven 支援已啟用
+		"java.import.generatesMetadataFilesAtProjectRoot": true, // 控制是否在專案根目錄生成元數據文件
+		"files.exclude": {
+			"**/.project": true,
+			"**/.classpath": true,
+			"**/.settings/": true
+		}, // 隱藏元數據文件
+		"java.configuration.updateBuildConfiguration": "interactive", // 避免自動更新
+		"java.format.enabled": false, // 禁用格式化以加速啟動
+		"java.referencesCodeLens.enabled": false, // 禁用 CodeLens
+		"java.progressReports.enabled": false, // 禁用進度報告
+		"java.jdt.ls.vmargs": "-Xms512m -Xmx4096m -XX:+UseG1GC -XX:+UseStringDeduplication --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED"
+	
+	}
+}
