@@ -1,22 +1,22 @@
 # ${startDate}~${endDate}
 
-## ${mondayDate}(一)
+## ${monday}(一)
 
 - 未撰寫
 
-## ${tuesdayDate}(二)
+## ${tuesday}(二)
 
 - 未撰寫
 
-## ${wednesdayDate}(三)
+## ${wednesday}(三)
 
 - 未撰寫
 
-## ${thursdayDate}(四)
+## ${thursday}(四)
 
 - 未撰寫
 
-## ${fridayDate}(五)
+## ${friday}(五)
 
 - 未撰寫
 

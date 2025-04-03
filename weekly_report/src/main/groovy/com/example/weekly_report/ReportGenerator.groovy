@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 import java.time.DayOfWeek
 import groovy.text.SimpleTemplateEngine
-import java.io.File
+import java.nio.charset.StandardCharsets
 
 class ReportGenerator {
 
@@ -29,7 +29,7 @@ class ReportGenerator {
             LocalDate endDate = startDate.plus(4, ChronoUnit.DAYS)
 
             // 讀取資源模板
-            String templateContent = new File("src/main/resources/template.md").text
+            String templateContent = Files.readString(Paths.get("src/main/resources/templates/reportTemplate.md"), StandardCharsets.UTF_8)
 
             // 使用 Groovy 的 SimpleTemplateEngine
             def engine = new SimpleTemplateEngine()

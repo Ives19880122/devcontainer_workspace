@@ -15,7 +15,7 @@ class WeeklyReportApplication implements CommandLineRunner {
     @Override
     void run(String... args) throws Exception {
         if (args.length < 2) {
-            println "請提供兩個參數：日期 (yyyy-MM-dd) 和輸出檔案位置"
+            println '請提供兩個參數：日期 (yyyy-MM-dd) 和輸出檔案位置'
             return
         }
 
