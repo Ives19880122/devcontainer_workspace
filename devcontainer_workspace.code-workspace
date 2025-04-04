@@ -18,7 +18,7 @@
 		"java.format.enabled": false, // 禁用格式化以加速啟動
 		"java.referencesCodeLens.enabled": false, // 禁用 CodeLens
 		"java.progressReports.enabled": false, // 禁用進度報告
-		"java.jdt.ls.vmargs": "-Xms512m -Xmx4096m -XX:+UseG1GC -XX:+UseStringDeduplication --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED"
+		"java.jdt.ls.vmargs": "-Xms512m -Xmx2G -XX:+UseG1GC -XX:+UseStringDeduplication --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED"
 	
 	}
 }

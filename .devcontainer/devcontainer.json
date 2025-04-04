@@ -19,10 +19,36 @@
 	"remoteUser": "vscode",
 	"features": {
 		"git": "os-provided",
-		"java": "21",
-		"ghcr.io/devcontainers/features/java:1": {
-			"maven": "true"
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"installYarnUsingApt": true,
+			"version": "22",
+			"pnpmVersion": "latest",
+			"nvmVersion": "latest"
 		},
-		"ghcr.io/devcontainers-extra/features/groovy-sdkman:2": {}
+		"ghcr.io/devcontainers-extra/features/groovy-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "21",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-extra/features/maven-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "21",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-extra/features/springboot-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "21",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-extra/features/ts-node:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/tsx:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/typescript:2": {
+			"version": "latest"
+		},
 	}
 }
