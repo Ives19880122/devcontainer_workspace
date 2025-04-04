@@ -19,7 +19,7 @@
     ]
   },
   "scripts": {
-    "copy-jar": "cp ../weekly_report/target/weekly_report-0.0.1-SNAPSHOT.jar ./resources/weekly_report.jar",
+    "copy-jar": "cp ../weekly_report/target/weekly_report.jar ./resources/weekly_report.jar",
     "vscode:prepublish": "npm run build",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
