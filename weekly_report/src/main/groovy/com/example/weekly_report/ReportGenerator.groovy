@@ -37,22 +37,27 @@ class ReportGenerator {
             def engine = new SimpleTemplateEngine()
             def template = engine.createTemplate(templateContent)
 
+
+
+            def formatterFull = DateTimeFormatter.ofPattern("yyyyMMdd")
+            def formatterHead = DateTimeFormatter.ofPattern("yyyy/MM/dd")
+            def formatterShort = DateTimeFormatter.ofPattern("MM/dd")
+
             // 準備模板參數
             def binding = [
-                startDate: startDate.toString(),
-                endDate  : endDate.toString(),
-                monday   : startDate.toString(),
-                tuesday  : startDate.plus(1, ChronoUnit.DAYS).toString(),
-                wednesday: startDate.plus(2, ChronoUnit.DAYS).toString(),
-                thursday : startDate.plus(3, ChronoUnit.DAYS).toString(),
-                friday   : endDate.toString()
+                dateHead: "${startDate.format(formatterHead)}~${endDate.format(formatterHead)}",
+                monday   : startDate.format(formatterShort),
+                tuesday  : startDate.plus(1, ChronoUnit.DAYS).format(formatterShort),
+                wednesday: startDate.plus(2, ChronoUnit.DAYS).format(formatterShort),
+                thursday : startDate.plus(3, ChronoUnit.DAYS).format(formatterShort),
+                friday   : endDate.format(formatterShort)
             ]
 
             // 將參數注入模板
             String reportContent = template.make(binding).toString()
 
             // 輸出檔案
-            String outputFileName = "${startDate}~${endDate}.md"
+            String outputFileName = "${startDate.format(formatterFull)}~${endDate.format(formatterFull)}.md"
             Files.write(Paths.get(outputPath, outputFileName), reportContent.bytes)
 
             println "報告已成功產生：${outputPath}/${outputFileName}"
